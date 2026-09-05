@@ -1,0 +1,557 @@
+// data/projects.ts
+import type { Project } from "@/types/project";
+
+export const projects: Project[] = [
+  {
+    slug: "STREN",
+    title: "STREN",
+    description:
+      "A full-stack SaaS product currently under development, with a V1 frontend and backend already implemented.",
+    longDescription:
+      "This is my main product currently under development, with the goal of evolving it into a production-ready SaaS that can be offered commercially. Version 1 includes both the frontend and backend, while the product is still being actively developed and expanded.",
+    category: "Full Stack",
+    featured: true,
+    status: "in-progress",
+    role: "Founder & Full Stack Developer",
+    techStack: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Express.js",
+      "Node.js",
+      "MongoDB",
+      "Mongoose",
+      "JWT",
+      "bcrypt",
+      "TanStack Query",
+      "Zustand",
+      "React Hook Form",
+      "Zod",
+      "Axios",
+      "Swagger",
+    ],
+    imageCount: 15,
+    images: [
+      {
+        src: "/images/projects/STREN/main.png",
+        alt: "STREN SaaS Main Interface",
+      },
+      // You can map over this array in the project details page
+      // { src: "/images/projects/STREN/01.png", alt: "STREN Dashboard" },
+    ],
+    githubUrl: "https://github.com/Hosam-Mostafa-2005/Gym-Managment-Platform",
+    features: [
+      "Full-stack architecture with separate frontend and backend",
+      "Secure authentication and authorization using JWT and bcrypt",
+      "RESTful API design with Express and Node.js",
+      "Database management with MongoDB and Mongoose",
+      "Form validation and handling with Zod and React Hook Form",
+      "State management using Zustand and TanStack Query",
+      "API documentation with Swagger",
+    ],
+    highlights: [
+      "Architected the entire SaaS platform from scratch.",
+      "Successfully implemented V1 encompassing both client and server sides.",
+      "Prepared the foundation for future commercial scalability.",
+    ],
+    phases: [
+      {
+        title: "V1",
+        description:
+          "Initial full-stack version with both frontend and backend implemented.",
+        status: "completed",
+      },
+      {
+        title: "SaaS Development",
+        description:
+          "Ongoing development focused on evolving the product into a production-ready SaaS.",
+        status: "in-progress",
+      },
+    ],
+    challenges: [
+      "Building both the frontend and backend of a product from the ground up.",
+      "Designing the architecture with future SaaS requirements in mind.",
+      "Evolving an initial V1 into a product that can eventually be offered commercially.",
+    ],
+    learnings: [
+      "Building and connecting a full-stack application.",
+      "Designing REST APIs with Express.js.",
+      "Working with MongoDB and Mongoose.",
+      "Implementing authentication and authorization concepts.",
+      "Managing server state and client state in a React application.",
+      "Thinking about software as a product rather than only as a technical project.",
+    ],
+  },
+  {
+    slug: "etsalah",
+    title: "EtSalah",
+    description:
+      "A platform that helps users find trusted technicians for home maintenance services with ease.",
+    longDescription:
+      "EtSalah is a home maintenance platform designed to make it easier for users to find specialized technicians for services such as electrical work, carpentry, plumbing, and air conditioning, with a focus on creating a simple and accessible user experience.",
+    category: "Frontend",
+    status: "in-progress",
+    featured: true,
+    role: "Frontend Developer",
+    techStack: [
+      "React 19",
+      "TypeScript",
+      "React Router DOM",
+      "React Hook Form",
+      "Zustand",
+      "TanStack Query",
+      "Framer Motion",
+      "Tailwind CSS",
+      "UUID",
+    ],
+    imageCount: 8,
+    images: [
+      {
+        src: "/images/projects/etsalah/main.png",
+        alt: "EtSalah platform interface",
+      },
+    ],
+    githubUrl: "https://github.com/Hosam-Mostafa-2005/Etsalah",
+    liveUrl: "https://etsalah.vercel.app/",
+    highlights: [
+      "Designed and implemented the main frontend experience.",
+      "Built service discovery and technician browsing interfaces.",
+      "Implemented forms and client-side state management.",
+      "Built reusable UI components for the platform.",
+      "Prepared the frontend architecture for future backend integration.",
+    ],
+    features: [
+      "Service discovery interface",
+      "Technician browsing system",
+      "Client-side state management",
+      "Reusable UI components",
+      "Modern React 19 implementation",
+    ],
+    challenges: [
+      "Designing a clear experience for discovering different maintenance services.",
+      "Managing application state across different parts of the platform.",
+      "Building the frontend while the backend was still under development.",
+    ],
+    learnings: [
+      "Working with React 19 and modern React patterns.",
+      "State management with Zustand.",
+      "Server-state management with TanStack Query.",
+      "Building forms with React Hook Form.",
+      "Structuring a larger frontend application.",
+    ],
+    beyondSlug: "etsalah",
+  },
+  {
+    slug: "ecommerce-admin-dashboard",
+    title: "E-commerce Admin Dashboard",
+    description:
+      "A modern admin dashboard for managing an e-commerce system, evolving from an MVP into a more realistic product-oriented admin experience.",
+    longDescription:
+      "E-commerce Admin Dashboard started as an MVP focused on building the core admin interface. In Phase 2, the project evolved beyond a simple UI into a more complete admin system with advanced analytics, customer insights, scheduling, improved product and order management, and richer data visualization. Phase 3 is planned to introduce backend integration and real data.",
+    category: "Frontend",
+    featured: true,
+    status: "in-progress",
+    role: "Frontend Developer",
+    techStack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Recharts",
+      "React Hook Form",
+      "Zod",
+      "TanStack Query",
+      "Axios",
+      "Zustand",
+      "FullCalendar",
+    ],
+    imageCount: 20,
+    images: [
+      {
+        src: "/images/projects/ecommerce-admin-dashboard/main.png",
+        alt: "E-commerce Admin Dashboard overview",
+      },
+      {
+        src: "/images/projects/ecommerce-admin-dashboard/products.png",
+        alt: "Products management page",
+      },
+      {
+        src: "/images/projects/ecommerce-admin-dashboard/revenue.png",
+        alt: "Revenue analytics dashboard",
+      },
+      {
+        src: "/images/projects/ecommerce-admin-dashboard/customers.png",
+        alt: "Customer insights and segmentation",
+      },
+      {
+        src: "/images/projects/ecommerce-admin-dashboard/order-details.png",
+        alt: "Order details page",
+      },
+      {
+        src: "/images/projects/ecommerce-admin-dashboard/product-view.png",
+        alt: "Product details page",
+      },
+      {
+        src: "/images/projects/ecommerce-admin-dashboard/settings.png",
+        alt: "Admin settings page",
+      },
+    ],
+    githubUrl:
+      "https://github.com/Hosam-Mostafa-2005/Ecommerce-Dashboard-Etsalah",
+    liveUrl:
+      "https://ecommerce-dashboard-etsalah-htjkbh3cv-hosso1.vercel.app/dashboard",
+    features: [
+      "Advanced Analytics & Revenue Reports",
+      "Customer Insights & Segmentation",
+      "Order Scheduling System",
+      "Product Management",
+      "Order Management",
+      "Revenue Visualization",
+      "Customer Analytics",
+      "Responsive Admin Interface",
+      "Improved UX and Data Visualization",
+    ],
+    highlights: [
+      "Evolved the project from a static MVP to a comprehensive dashboard.",
+      "Implemented complex data visualization using Recharts.",
+      "Built a scalable and structured frontend architecture.",
+    ],
+    phases: [
+      {
+        title: "Phase 1 — MVP",
+        description:
+          "Built the initial admin dashboard experience and core e-commerce management interfaces.",
+        status: "completed",
+      },
+      {
+        title: "Phase 2 — Product Evolution",
+        description:
+          "Expanded the MVP with advanced analytics, customer insights, scheduling, improved product and order management, and richer data visualization.",
+        status: "completed",
+      },
+      {
+        title: "Phase 3 — Backend & Real Data",
+        description:
+          "Planned backend integration and replacement of mock data with real application data.",
+        status: "planned",
+      },
+    ],
+    challenges: [
+      "Turning a static MVP interface into a more realistic admin system.",
+      "Organizing large amounts of business data without making the interface overwhelming.",
+      "Designing useful analytics and visualizations for different parts of the e-commerce system.",
+      "Keeping the dashboard scalable as new features and phases are introduced.",
+    ],
+    learnings: [
+      "Designing interfaces around real product workflows rather than isolated screens.",
+      "Working with data visualization and analytics-heavy interfaces.",
+      "Structuring a frontend application for future backend integration.",
+      "Thinking about UX and information hierarchy in complex admin systems.",
+    ],
+  },
+  {
+    slug: "movies-app",
+    title: "Movies App",
+    description:
+      "A responsive movie browsing application that allows users to search for movies, browse available titles, and view detailed movie information.",
+    longDescription:
+      "Movies App is a frontend web application developed as the final project of the ITI Front-End Development Summer Course. The application focuses on movie discovery, search, browsing, and viewing movie details through a clean and responsive user interface.",
+    category: "Frontend",
+    featured: true,
+    status: "completed",
+    role: "Frontend Developer",
+    techStack: [
+      "React",
+      "JavaScript",
+      "HTML5",
+      "CSS",
+      "React Router DOM",
+      "TanStack Query",
+      "React Icons",
+      "Tailwind CSS",
+    ],
+    imageCount: 8,
+    images: [
+      {
+        src: "/images/projects/movies-app/main.png",
+        alt: "Movies App interface",
+      },
+      // You can add more screenshots here to map over later
+    ],
+    githubUrl: "https://github.com/Hosam-Mostafa-2005/Movies-App",
+    liveUrl: "https://movies-app-lake.vercel.app/",
+    features: [
+      "Movie Search",
+      "Movie Browsing",
+      "Movie Details",
+      "Responsive User Interface",
+      "Clean UI Design",
+    ],
+    highlights: [
+      "Built the project as the final project of the ITI Front-End Development Summer Course.",
+      "Implemented a responsive movie browsing experience.",
+      "Built movie search and browsing functionality.",
+      "Created movie details views.",
+      "Focused on clean UI and smooth user experience.",
+    ],
+    challenges: [
+      "Building a complete frontend application as a final training project.",
+      "Organizing the application into reusable React components.",
+      "Creating a responsive and user-friendly movie browsing experience.",
+      "Working with movie data and API integration.",
+    ],
+    learnings: [
+      "Building applications with React.",
+      "Component-based frontend development.",
+      "Working with APIs and asynchronous data.",
+      "Using React Router DOM for navigation.",
+      "Managing server state with TanStack Query.",
+      "Building responsive web interfaces.",
+    ],
+  },
+  {
+    slug: "syncfusion-dashboard",
+    title: "Syncfusion Dashboard",
+    description:
+      "A modern admin dashboard built with React and Syncfusion, featuring e-commerce management pages, interactive data visualizations, and productivity tools.",
+    longDescription:
+      "Syncfusion Dashboard is a frontend dashboard project built to explore and implement a wide range of Syncfusion React components in a realistic admin interface. The dashboard includes e-commerce management pages for orders, employees, and customers, alongside productivity tools such as Calendar and Kanban, as well as multiple interactive chart types for data visualization.",
+    category: "Frontend",
+    featured: false,
+    status: "completed",
+    role: "Frontend Developer",
+    techStack: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Syncfusion EJ2",
+      "Syncfusion React Charts",
+      "Syncfusion React Calendars",
+      "Syncfusion React Grids",
+      "Syncfusion React Kanban",
+      "Syncfusion React Schedule",
+      "React Router DOM",
+      "React Icons",
+    ],
+    imageCount: 10,
+    images: [
+      {
+        src: "/images/projects/syncfusion-dashboard/main.png",
+        alt: "Syncfusion Dashboard overview",
+      },
+      {
+        src: "/images/projects/syncfusion-dashboard/orders.png",
+        alt: "Orders management page",
+      },
+      {
+        src: "/images/projects/syncfusion-dashboard/employees.png",
+        alt: "Employees management page",
+      },
+      {
+        src: "/images/projects/syncfusion-dashboard/customers.png",
+        alt: "Customers management page",
+      },
+      {
+        src: "/images/projects/syncfusion-dashboard/calendar.png",
+        alt: "Calendar application",
+      },
+      {
+        src: "/images/projects/syncfusion-dashboard/kanban.png",
+        alt: "Kanban board",
+      },
+      {
+        src: "/images/projects/syncfusion-dashboard/line-chart.png",
+        alt: "Line chart visualization",
+      },
+      {
+        src: "/images/projects/syncfusion-dashboard/area-chart.png",
+        alt: "Area chart visualization",
+      },
+      {
+        src: "/images/projects/syncfusion-dashboard/bar-chart.png",
+        alt: "Bar chart visualization",
+      },
+      {
+        src: "/images/projects/syncfusion-dashboard/pie-chart.png",
+        alt: "Pie chart visualization",
+      },
+    ],
+    githubUrl: "https://github.com/Hosam-Mostafa-2005/Dashboard-Syncfusion-",
+    liveUrl: "https://dashboard-syncfusion-theta.vercel.app/",
+    features: [
+      "E-commerce Dashboard",
+      "Orders Management",
+      "Employees Management",
+      "Customers Management",
+      "Calendar",
+      "Kanban Board",
+      "Interactive Line Charts",
+      "Interactive Area Charts",
+      "Interactive Bar Charts",
+      "Interactive Pie Charts",
+      "Data Grids",
+      "Responsive Admin Interface",
+    ],
+    highlights: [
+      "Mastered the integration of complex third-party UI libraries.",
+      "Built an extensive suite of data visualization charts.",
+      "Implemented advanced productivity tools like Kanban and Schedule.",
+    ],
+    challenges: [
+      "Working with a wide range of Syncfusion React components.",
+      "Building a consistent admin interface across different dashboard sections.",
+      "Presenting complex datasets through interactive charts and data grids.",
+      "Integrating multiple UI components while keeping navigation and layout consistent.",
+    ],
+    learnings: [
+      "Working with Syncfusion's React component ecosystem.",
+      "Building data-heavy admin dashboard interfaces.",
+      "Using interactive charts for data visualization.",
+      "Working with grids, calendars, and Kanban components.",
+      "Structuring a multi-page React dashboard with React Router.",
+      "Building reusable frontend interfaces with Tailwind CSS.",
+    ],
+  },
+  {
+    slug: "mutqn",
+    title: "Mutqn",
+    description:
+      "A frontend MVP for a platform that connects Quran teachers with parents to make Quran learning and memorization easier for children.",
+    longDescription:
+      "Mutqn is an MVP developed as part of a startup ideation project during the Creative Ideation Bootcamp. The platform aims to connect Quran teachers with parents, providing a structured way to support Quran learning and memorization for children. The MVP was built to translate the startup idea and its core features into a practical product experience.",
+    category: "Frontend",
+    featured: false,
+    status: "completed",
+    role: "Frontend Developer",
+    techStack: [
+      "React",
+      "React 19",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React Hook Form",
+      "Zustand",
+      "React Router DOM",
+      "Lucide React",
+      "React Icons",
+    ],
+    imageCount: 24,
+    images: [
+      {
+        src: "/images/projects/mutqn/main.png",
+        alt: "Mutqn platform interface",
+      },
+    ],
+    githubUrl: "https://github.com/Hosam-Mostafa-2005/Motqn",
+    features: [
+      "Teacher and parent-focused platform experience",
+      "Quran learning and memorization platform",
+      "MVP product experience",
+      "Structured user flows",
+      "Responsive interface",
+    ],
+    highlights: [
+      "Developed a complete working MVP in an extremely short timeframe.",
+      "Focused heavily on UX for both parents and teachers.",
+      "Integrated modern frontend tools to ensure a smooth and engaging UI.",
+    ],
+    challenges: [
+      "Translating a startup idea into a practical MVP.",
+      "Designing the core product experience within a short ideation timeframe.",
+      "Turning the team's ideas and proposed features into a coherent frontend interface.",
+      "Building an MVP that communicates the product concept clearly.",
+    ],
+    learnings: [
+      "Turning an early-stage startup idea into a tangible product.",
+      "Working within a fast-paced ideation environment.",
+      "Translating product ideas and features into frontend interfaces.",
+      "Collaborating with a team during product development.",
+      "Building an MVP around a clear product concept.",
+    ],
+    beyondSlug: "mutqn",
+  },
+  {
+    slug: "promptopia",
+    title: "Promptopia",
+    description:
+      "An AI prompt discovery and sharing platform where users can discover, create, edit, and manage useful prompts.",
+    longDescription:
+      "Promptopia is a full-stack web application built around discovering and sharing AI prompts. Users can browse prompts, search by tags or usernames, create their own prompts, and manage their posts through authentication and profile functionality.",
+    category: "Full Stack",
+    featured: false,
+    status: "completed",
+    role: "Full Stack Developer",
+    techStack: [
+      "Next.js 15",
+      "React 19",
+      "TypeScript",
+      "MongoDB",
+      "Mongoose",
+      "NextAuth",
+      "bcrypt",
+      "React Icons",
+      "Tailwind CSS",
+    ],
+    imageCount: 4,
+    images: [
+      {
+        src: "/images/projects/promptopia/main.png",
+        alt: "Promptopia AI prompt discovery and sharing platform",
+      },
+      {
+        src: "/images/projects/promptopia/01.png",
+        alt: "Promptopia prompt discovery page",
+      },
+      {
+        src: "/images/projects/promptopia/02.png",
+        alt: "Promptopia create post page",
+      },
+      {
+        src: "/images/projects/promptopia/03.png",
+        alt: "Promptopia user profile page",
+      },
+      {
+        src: "/images/projects/promptopia/04.png",
+        alt: "Promptopia edit post page",
+      },
+    ],
+    githubUrl: "https://github.com/Hosam-Mostafa-2005/Promptopia",
+    highlights: [
+      "Built a full-stack platform for discovering and sharing AI prompts.",
+      "Implemented user authentication and account-based functionality.",
+      "Built prompt creation and publishing functionality.",
+      "Implemented editing and deletion of user posts.",
+      "Added prompt discovery through tag and username search.",
+      "Built user profile pages for managing and viewing published prompts.",
+      "Integrated MongoDB with Mongoose for data persistence.",
+    ],
+    features: [
+      "User authentication",
+      "Prompt discovery",
+      "Search by tag or username",
+      "Create posts",
+      "Edit posts",
+      "Delete posts",
+      "User profiles",
+      "MongoDB data persistence",
+    ],
+    challenges: [
+      "Building a complete application with both frontend and backend functionality.",
+      "Managing authentication and user-specific actions.",
+      "Designing a simple interface for discovering and managing prompts.",
+      "Connecting the application with MongoDB and structuring application data.",
+    ],
+    learnings: [
+      "Building full-stack applications with Next.js.",
+      "Working with MongoDB and Mongoose.",
+      "Implementing authentication with NextAuth.",
+      "Handling password security with bcrypt.",
+      "Building user-based CRUD functionality.",
+      "Structuring a full-stack application around real user interactions.",
+    ],
+  },
+];
