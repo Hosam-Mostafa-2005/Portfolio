@@ -16,7 +16,7 @@ export const certificates: Certificate[] = [
   },
   {
     slug: "yly-organizing",
-    title: "Organizing Committee Member",
+    title: "Social Media Member",
     organization: "YLY / Ministry of Youth and Sports",
     date: "September 27, 2025",
     category: "experience",
@@ -24,7 +24,7 @@ export const certificates: Certificate[] = [
   },
   {
     slug: "hult-recognition",
-    title: "Competition Recognition",
+    title: "Hult Prize Member Recognition",
     organization: "Hult Prize",
     category: "experience",
     image: "/images/certificates/Hult.jpg",
