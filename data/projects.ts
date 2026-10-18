@@ -252,6 +252,102 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "sol-shopify-store",
+    title: "SOL — Shopify Store",
+    description:
+      "A bilingual e-commerce storefront for SOL, a lifestyle-driven watch retailer, built with a custom Shopify theme.",
+    longDescription:
+      "SOL is a custom Shopify storefront designed for a watch retailer focused on style, character, and everyday wearability. The store features a premium burgundy and gold visual identity, bilingual Arabic and English experiences, curated watch collections, product detail pages, shopping cart, and customer contact interfaces. The project focuses on translating SOL's brand identity into a cohesive and responsive e-commerce experience.",
+    category: "Frontend",
+    featured: true,
+    status: "completed",
+    role: "Shopify Theme Developer",
+    techStack: [
+      "Shopify",
+      "Liquid",
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Shopify Theme Architecture",
+      "Responsive Web Design",
+    ],
+    imageCount: 10,
+    images: [
+      {
+        src: "/images/projects/sol-shopify-store/main.png",
+        alt: "SOL Shopify storefront homepage",
+      },
+      {
+        src: "/images/projects/sol-shopify-store/2.png",
+        alt: "Home Arabic",
+      },
+      {
+        src: "/images/projects/sol-shopify-store/3.png",
+        alt: "Cart",
+      },
+      {
+        src: "/images/projects/sol-shopify-store/4.png",
+        alt: "Cart Message",
+      },
+      {
+        src: "/images/projects/sol-shopify-store/5.png",
+        alt: "SOL Search",
+      },
+      {
+        src: "/images/projects/sol-shopify-store/6.png",
+        alt: "SOL Product detail page",
+      },
+      {
+        src: "/images/projects/sol-shopify-store/7.png",
+        alt: "SOL Collection page",
+      },
+      {
+        src: "/images/projects/sol-shopify-store/8.png",
+        alt: "SOL All Watches page",
+      },
+      {
+        src: "/images/projects/sol-shopify-store/9.png",
+        alt: "SOL About page",
+      },
+      {
+        src: "/images/projects/sol-shopify-store/10.png",
+        alt: "SOL Contact page",
+      },
+    ],
+    githubUrl: "https://github.com/Hosam-Mostafa-2005/SOL-Shopify-Store",
+    features: [
+      "Custom Shopify theme development using Liquid",
+      "Bilingual Arabic and English storefront",
+      "Responsive layouts for desktop and mobile",
+      "Product listing and product detail pages",
+      "Curated product collections and collection browsing",
+      "Shopping cart interface",
+      "Custom homepage and brand storytelling sections",
+      "Customer contact page and WhatsApp contact entry points",
+      "Consistent burgundy and gold visual identity",
+      "Reusable Shopify sections and snippets",
+    ],
+    highlights: [
+      "Translated SOL's visual identity into a cohesive e-commerce storefront.",
+      "Built reusable Shopify theme sections and Liquid templates.",
+      "Designed bilingual shopping experiences for Arabic and English audiences.",
+      "Created dedicated interfaces for product discovery, collections, and customer support.",
+    ],
+    challenges: [
+      "Maintaining consistent visual design across multiple storefront pages.",
+      "Supporting Arabic and English layouts and content.",
+      "Structuring reusable Shopify sections and snippets.",
+      "Presenting watch products through a consistent premium brand experience.",
+    ],
+    learnings: [
+      "Shopify theme architecture and Liquid templating.",
+      "Building reusable Shopify sections and snippets.",
+      "Creating responsive e-commerce interfaces.",
+      "Structuring bilingual storefront experiences.",
+      "Translating brand identity into a consistent digital shopping experience.",
+    ],
+  },
+  {
     slug: "movies-app",
     title: "Movies App",
     description:
@@ -447,6 +543,7 @@ export const projects: Project[] = [
       },
     ],
     githubUrl: "https://github.com/Hosam-Mostafa-2005/Motqn",
+    liveUrl: "https://motqn-drab.vercel.app/",
     features: [
       "Teacher and parent-focused platform experience",
       "Quran learning and memorization platform",
