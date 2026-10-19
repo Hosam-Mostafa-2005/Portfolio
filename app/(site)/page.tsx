@@ -2,6 +2,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -9,8 +10,13 @@ import {
   Sparkles,
   MoveUpRight,
   Mail,
+  Asterisk,
 } from "lucide-react";
-import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
+import FeaturedProjects from "@/components/tech/FeaturedProjects";
+import RemainingProjects from "@/components/tech/RemainingProjects";
+import BeyondSection from "@/components/beyond/BeyondSection";
 
 // ==========================================
 // SHARED PLAYFUL UI COMPONENTS
@@ -57,12 +63,12 @@ const Annotation = ({
 );
 
 // ==========================================
-// PAGE SECTIONS
+// 1. HERO SECTION
 // ==========================================
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[85vh] flex flex-col justify-center px-6 md:px-12 pt-24 pb-20 overflow-hidden">
+    <section className="relative min-h-[85vh] flex flex-col justify-center px-6 md:px-12 pt-28 pb-20 overflow-hidden">
       <div className="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -73,7 +79,7 @@ const Hero = () => {
           <div className="mb-6 flex items-center gap-3">
             <Sparkles className="text-[#9CAF9A] w-5 h-5" />
             <span className="font-mono text-xs text-[#9CAF9A] tracking-widest uppercase border border-[#9CAF9A]/30 px-3 py-1 rounded-full">
-              Welcome to the universe
+              Software Developer Portfolio
             </span>
           </div>
 
@@ -90,10 +96,27 @@ const Hero = () => {
             </span>
           </h1>
 
-          <p className="max-w-md text-[#F3E2C5]/70 font-medium text-sm md:text-base leading-relaxed">
-            I am a developer who likes understanding how things work, building
-            useful systems, creating content, and exploring ideas beyond code.
+          <p className="max-w-xl text-[#F3E2C5]/80 font-medium text-sm md:text-base leading-relaxed mb-8">
+            Full-stack developer focused on modern web applications, scalable
+            front-end architectures, and responsive digital products with React,
+            Next.js, TypeScript, and Node.js.
           </p>
+
+          <div className="flex flex-wrap items-center gap-4">
+            <a
+              href="#tech-section"
+              className="inline-flex items-center gap-2.5 font-bold uppercase tracking-widest text-xs text-[#5A0F1B] bg-[#F3E2C5] px-6 py-3.5 shadow-[3px_3px_0px_0px_#9CAF9A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#9CAF9A] transition-all"
+            >
+              <span>Explore My Work</span>
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <Link
+              href="/tech"
+              className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-[#F3E2C5] border border-[#F3E2C5]/30 hover:bg-[#F3E2C5]/10 px-5 py-3 transition-colors"
+            >
+              <span>Tech Overview</span>
+            </Link>
+          </div>
         </motion.div>
 
         <motion.div
@@ -113,11 +136,11 @@ const Hero = () => {
           </div>
 
           <Sticker
-            text="Creator"
+            text="Engineer"
             className="top-4 right-4 md:right-8 rotate-[12deg]"
           />
           <Sticker
-            text="Engineer"
+            text="Creator"
             className="bottom-10 -left-2"
             rotate="rotate-[-8deg]"
           />
@@ -134,117 +157,71 @@ const Hero = () => {
   );
 };
 
-const MapOfWorlds = () => {
+// ==========================================
+// 2. TECH SECTION INTRO / HIGHLIGHT
+// ==========================================
+
+const TechIntro = () => {
+  const quickSkills = [
+    "React.js",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Tailwind CSS",
+    "REST APIs",
+  ];
+
   return (
-    <section className="px-6 md:px-12 py-24 md:py-32 relative z-20">
-      <div className="max-w-6xl mx-auto">
-        <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <div>
-            <h2 className="text-2xl md:text-4xl font-bold uppercase text-[#F3E2C5] mb-3">
-              Choose Your Path
-            </h2>
-            <p className="text-[#F3E2C5]/60 font-mono text-xs md:text-sm max-w-md leading-relaxed">
-              Two distinct sides of the same mind. Explore the systems I build
-              or the ideas I study.
-            </p>
+    <section
+      id="tech-section"
+      className="px-6 md:px-12 pt-20 pb-12 max-w-7xl mx-auto border-t border-[#F3E2C5]/15 relative"
+    >
+      <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-10">
+        <div>
+          <div className="flex items-center gap-3 mb-4">
+            <Asterisk className="text-[#9CAF9A] w-5 h-5 animate-[spin_6s_linear_infinite]" />
+            <span className="font-mono text-xs text-[#9CAF9A] tracking-widest uppercase border border-[#9CAF9A]/30 px-3 py-1 rounded-sm">
+              01 / Engineering & Architecture
+            </span>
           </div>
-          <Annotation
-            text="Pick a destination"
-            className="relative md:-translate-y-4"
-            direction="right"
-          />
+
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black uppercase text-[#F3E2C5] tracking-tight mb-4">
+            Systems & Code.
+          </h2>
+
+          <p className="max-w-2xl text-[#F3E2C5]/80 text-sm md:text-base leading-relaxed font-mono">
+            Full-stack engineering projects, robust frontend systems, and
+            practical software builds. Focused on clean architecture, performance,
+            and real-world user value.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-          {/* 01: TECH */}
-          <motion.a
-            href="/tech"
-            whileHover={{ y: -8 }}
-            className="group relative border border-[#F3E2C5]/20 p-8 md:p-10 transition-colors hover:bg-[#F3E2C5]/5 flex flex-col"
-          >
-            <div
-              className="absolute inset-0 pointer-events-none opacity-[0.02]"
-              style={{
-                backgroundImage:
-                  "linear-gradient(#F3E2C5 1px, transparent 1px), linear-gradient(90deg, #F3E2C5 1px, transparent 1px)",
-                backgroundSize: "30px 30px",
-              }}
-            />
-
-            <div className="flex justify-between items-start mb-10">
-              <span className="font-mono text-[#9CAF9A] text-lg">01</span>
-              <span className="font-mono text-[#F3E2C5]/50 text-[10px] uppercase tracking-widest border border-[#F3E2C5]/20 px-2 py-1">
-                Systems & Code
+        {/* Quick Skills Pills */}
+        <div className="flex flex-col gap-3">
+          <span className="font-mono text-[10px] text-[#9CAF9A] uppercase tracking-widest">
+            Core Technical Stack
+          </span>
+          <div className="flex flex-wrap gap-2 max-w-md">
+            {quickSkills.map((skill, i) => (
+              <span
+                key={i}
+                className="font-mono text-[11px] text-[#F3E2C5] uppercase tracking-wider bg-[#F3E2C5]/5 border border-[#F3E2C5]/20 px-3 py-1 rounded-sm"
+              >
+                {skill}
               </span>
-            </div>
-
-            {/* Real Personal Image - Tech */}
-            <div className="w-full aspect-video md:aspect-[4/3] mb-8 relative overflow-hidden border border-[#F3E2C5]/30">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/me/tech.png"
-                alt="Tech World Visual"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-            </div>
-
-            <h3 className="text-3xl font-black uppercase text-[#F3E2C5] tracking-tight mb-3 group-hover:text-[#9CAF9A] transition-colors">
-              Tech
-            </h3>
-            <p className="text-[#F3E2C5]/70 text-sm mb-8 leading-relaxed max-w-sm flex-grow">
-              Software engineering, architecture, frontend/backend logic, and
-              precise technical builds.
-            </p>
-
-            <div className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-[#F3E2C5]">
-              Enter Tech{" "}
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </div>
-          </motion.a>
-
-          {/* 02: BEYOND */}
-          <motion.a
-            href="/beyond"
-            whileHover={{ y: -8 }}
-            className="group relative border border-[#F3E2C5]/20 rounded-[2rem] p-8 md:p-10 transition-colors hover:bg-[#F3E2C5]/5 flex flex-col"
-          >
-            <div className="flex justify-between items-start mb-10">
-              <span className="font-serif italic text-[#9CAF9A] text-xl">
-                02
-              </span>
-              <span className="font-mono text-[#5A0F1B] bg-[#F3E2C5] text-[10px] uppercase tracking-widest rounded-full px-3 py-1 rotate-3">
-                Curiosity & Ideas
-              </span>
-            </div>
-
-            {/* Real Personal Image - Beyond Tech */}
-            <div className="w-[90%] mx-auto aspect-square md:aspect-[4/3] mb-8 relative overflow-hidden rounded-2xl rotate-[-2deg] group-hover:rotate-0 transition-transform duration-500 shadow-xl border border-[#F3E2C5]/20">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/me/beyond-tech.png"
-                alt="Beyond Tech Visual"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-            </div>
-
-            <h3 className="text-3xl font-black uppercase text-[#F3E2C5] tracking-tight mb-3 group-hover:text-[#9CAF9A] transition-colors">
-              Beyond Tech
-            </h3>
-            <p className="text-[#F3E2C5]/70 text-sm mb-8 leading-relaxed max-w-sm flex-grow">
-              Content creation, YouTube, research, storytelling, and visual
-              experiments outside pure code.
-            </p>
-
-            <div className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-[#F3E2C5]">
-              Explore Beyond{" "}
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </div>
-          </motion.a>
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
 };
+
+// ==========================================
+// 5. MANIFESTO
+// ==========================================
 
 const Manifesto = () => {
   return (
@@ -287,6 +264,10 @@ const Manifesto = () => {
   );
 };
 
+// ==========================================
+// 6. CONTACT LINKS
+// ==========================================
+
 const ContactLinks = () => {
   return (
     <section className="px-6 md:px-12 py-24 md:py-32">
@@ -298,11 +279,11 @@ const ContactLinks = () => {
             rotate="rotate-[-10deg]"
           />
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase text-[#F3E2C5] leading-[0.95] mb-6">
-            Let's <span className="text-[#9CAF9A]">Connect.</span>
+            Let&apos;s <span className="text-[#9CAF9A]">Connect.</span>
           </h2>
-          <p className="text-[#F3E2C5]/60 text-sm md:text-base max-w-md mx-auto leading-relaxed">
-            Whether it's a technical system, a creative collaboration, or just
-            nerding out over a concept.
+          <p className="text-[#F3E2C5]/70 text-sm md:text-base max-w-md mx-auto leading-relaxed">
+            Whether it&apos;s a technical role, full-stack software system, a creative
+            collaboration, or discussing ideas.
           </p>
 
           <div className="hidden md:block absolute -bottom-10 right-0 md:right-12 opacity-90 z-20">
@@ -318,18 +299,6 @@ const ContactLinks = () => {
 
         {/* Direct Connect Links */}
         <div className="flex flex-wrap justify-center gap-4 md:gap-6 mt-8 relative z-10 w-full">
-          {/* <a
-            href="https://wa.me/201552980635"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex items-center gap-3 px-6 py-4 bg-[#F3E2C5] text-[#5A0F1B] hover:bg-[#9CAF9A] transition-colors rounded-sm shadow-[4px_4px_0px_0px_#9CAF9A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_#9CAF9A]"
-          >
-            <FaWhatsapp className="w-5 h-5" />
-            <span className="font-bold text-xs uppercase tracking-widest">
-              WhatsApp
-            </span>
-          </a> */}
-
           <a
             href="mailto:eldinhosam11@gmail.com"
             className="group flex items-center gap-3 px-6 py-4 bg-[#F3E2C5] text-[#5A0F1B] hover:bg-[#9CAF9A] transition-colors rounded-sm shadow-[4px_4px_0px_0px_#9CAF9A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_#9CAF9A]"
@@ -369,11 +338,29 @@ const ContactLinks = () => {
   );
 };
 
+// ==========================================
+// MAIN HOMEPAGE COMPONENT
+// ==========================================
+
 export default function HossoWorldHome() {
   return (
     <main className="bg-[#5A0F1B] min-h-screen font-sans selection:bg-[#9CAF9A] selection:text-[#5A0F1B]">
+      {/* 1. Existing Hero / Introduction Section */}
       <Hero />
-      <MapOfWorlds />
+
+      {/* 2. Tech Section Introduction */}
+      <TechIntro />
+
+      {/* 3. Featured Projects (STREN, Etsalah, Ecommerce Admin Dashboard) */}
+      <FeaturedProjects />
+
+      {/* 4. Remaining Tech Projects */}
+      <RemainingProjects />
+
+      {/* 5. Beyond Tech (Positioned strictly below all tech projects) */}
+      <BeyondSection />
+
+      {/* 6. Closing Manifesto & Contact */}
       <Manifesto />
       <ContactLinks />
     </main>

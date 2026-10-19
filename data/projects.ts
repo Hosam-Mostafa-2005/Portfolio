@@ -259,7 +259,7 @@ export const projects: Project[] = [
     longDescription:
       "SOL is a custom Shopify storefront designed for a watch retailer focused on style, character, and everyday wearability. The store features a premium burgundy and gold visual identity, bilingual Arabic and English experiences, curated watch collections, product detail pages, shopping cart, and customer contact interfaces. The project focuses on translating SOL's brand identity into a cohesive and responsive e-commerce experience.",
     category: "Frontend",
-    featured: true,
+    featured: false,
     status: "completed",
     role: "Shopify Theme Developer",
     techStack: [
@@ -355,7 +355,7 @@ export const projects: Project[] = [
     longDescription:
       "Movies App is a frontend web application developed as the final project of the ITI Front-End Development Summer Course. The application focuses on movie discovery, search, browsing, and viewing movie details through a clean and responsive user interface.",
     category: "Frontend",
-    featured: true,
+    featured: false,
     status: "completed",
     role: "Frontend Developer",
     techStack: [

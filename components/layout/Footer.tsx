@@ -14,9 +14,12 @@ const EXPLORE_LINKS = [
 ];
 
 const CONNECT_LINKS = [
-  { name: "GitHub", path: "#" },
-  { name: "LinkedIn", path: "#" },
-  { name: "Email", path: "mailto:#" },
+  { name: "GitHub", path: "https://github.com/Hosam-Mostafa-2005" },
+  {
+    name: "LinkedIn",
+    path: "https://www.linkedin.com/in/hosam-mostafa-81527b307",
+  },
+  { name: "Email", path: "mailto:eldinhosam11@gmail.com" },
 ];
 export default function Footer() {
   return (
