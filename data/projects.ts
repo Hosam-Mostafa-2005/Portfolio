@@ -41,6 +41,7 @@ export const projects: Project[] = [
       // { src: "/images/projects/STREN/01.png", alt: "STREN Dashboard" },
     ],
     githubUrl: "https://github.com/Hosam-Mostafa-2005/Gym-Managment-Platform",
+    liveUrl: "https://stren.vercel.app/",
     features: [
       "Full-stack architecture with separate frontend and backend",
       "Secure authentication and authorization using JWT and bcrypt",
