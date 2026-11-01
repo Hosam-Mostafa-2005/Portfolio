@@ -316,6 +316,7 @@ export const projects: Project[] = [
       },
     ],
     githubUrl: "https://github.com/Hosam-Mostafa-2005/SOL-Shopify-Store",
+    liveUrl: "https://soltanta.myshopify.com/",
     features: [
       "Custom Shopify theme development using Liquid",
       "Bilingual Arabic and English storefront",
